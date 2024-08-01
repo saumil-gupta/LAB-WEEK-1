@@ -3,22 +3,24 @@ using namespace std;
 int main()
 {
     int size;
-    cout<<"ENTER THE SIZE OF THE ARRAY : ";
+    cout<<"ENTER THE SIZE OF THE MATRIX : ";
     cin>>size;
-    int array[size];
-    cout<<"ENTER THE ELEMENTS OF THE ARRAY : ";
+    int array[size][size];
+    cout<<"ENTER THE ELEMENTS OF THE MATRIX : ";
     for(int i=0;i<=size-1;i++)
     {
-        cin>>array[i];
+        for(int j=0;j<=size-1;j++)
+        {
+            cin>>array[i][j];
+        }
     }
-    int sum=0;
-    int avg=0;
     for(int i=0;i<=size-1;i++)
     {
-        sum+=array[i];
+        for(int j=0;j<=size-1;j++)
+        {
+            cout<<array[j][i]<<"    ";
+        }
+        cout<<endl;
     }
-    avg=sum/size;
-    cout<<"SUM IS "<<sum<<endl;
-    cout<<"AVERAGE IS "<<avg<<endl;
     return 0;
 }
